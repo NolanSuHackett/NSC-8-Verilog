@@ -1,0 +1,21 @@
+# Simulation outputs
+*.vvp
+*.vcd
+*.fst
+*.log
+*.lxt
+*.out
+
+# GTKWave save files
+*.gtkw
+
+# Build folders (if using any)
+sim/
+build/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code workspace settings (optional)
+.vscode/
