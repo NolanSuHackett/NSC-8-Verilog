@@ -1,4 +1,4 @@
-module N_tristate_buffer #(parameter N = 4) (
+module n_tristate_buffer #(parameter N = 4) (
     input wire control_bit,
     input wire [N-1:0] in_data,
     output wire [N-1:0] out_data
