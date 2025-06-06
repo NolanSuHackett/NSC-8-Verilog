@@ -23,11 +23,11 @@ n_bit_register #(X/2) upper_nibble(
 );
 
 n_bit_register #(X/2) lower_nibble(
-    .data_in(data_in[((X/2)-1:0)]),
+    .data_in(data_in[(X/2)-1:0]),
     .clear(1'b0),
     .clk(clk),
     .write_enable(write_enable_lower),
-    .data_out(a_reg_out[((X/2)-1:0)])
+    .data_out(a_reg_out[(X/2)-1:0])
 );
 
 n_tristate_buffer #(X) tristate_buffer(
