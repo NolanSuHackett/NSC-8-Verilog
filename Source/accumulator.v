@@ -14,7 +14,7 @@ wire write_enable_lower = load_a | load_immediate_a;
 
 wire [X-1:0] a_reg_out;
 
-n_bit_register #(X/2) upper_nibble(
+n_bit_register #(X/2) upper_nibble_a(
     .data_in(data_in[(X-1):(X/2)]),
     .clk(clk),
     .clear(load_immediate_a),
@@ -22,7 +22,7 @@ n_bit_register #(X/2) upper_nibble(
     .data_out(a_reg_out[(X-1):(X/2)]) //upper bit output
 );
 
-n_bit_register #(X/2) lower_nibble(
+n_bit_register #(X/2) lower_nibble_a(
     .data_in(data_in[(X/2)-1:0]),
     .clear(1'b0),
     .clk(clk),
