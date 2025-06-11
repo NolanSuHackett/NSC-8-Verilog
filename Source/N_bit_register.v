@@ -4,12 +4,14 @@ module n_bit_register #(parameter N=8) (
     input wire clk,
     input wire clear,
     output reg [N-1:0] data_out
-
 );
+
     always @(posedge clk) begin
-        if (clear)
+        if (clear) begin
             data_out <= {N{1'b0}};
-        if (write_enable)
+        end
+        else if (write_enable) begin
             data_out <= data_in;
+        end
     end
 endmodule

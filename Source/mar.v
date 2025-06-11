@@ -3,7 +3,6 @@ module mar #(parameter N = 4) (
     input wire clk,
     input wire [N-1:0] data_in,
     output wire [N-1:0] data_out
-
 );
 
 n_bit_register #(N) mar_register (
