@@ -4,7 +4,8 @@ module accumulator #(parameter X = 8)(
     input wire clk,
     input wire load_a,
     input wire output_enable,
-    output wire [X-1:0] data_out
+    output wire [X-1:0] data_out_bus,
+    output reg [X-1:0] data_out_alu
 );
 
 
@@ -33,8 +34,12 @@ n_bit_register #(X/2) lower_nibble_a(
 n_tristate_buffer #(X) tristate_buffer(
     .in_data(a_reg_out[X-1:0]),
     .control_bit(output_enable),
-    .out_data(data_out)
+    .out_data(data_out_bus)
 );
+
+always @(*) begin
+    data_out_alu = a_reg_out;
+end
 
 endmodule
 

@@ -29,6 +29,7 @@ n_tristate_buffer #(N) ram_buffer (
 always @(posedge clk) begin
     if (store) begin
         ram_array[memory_address] <= data_in;
+        
     end
 end 
 endmodule

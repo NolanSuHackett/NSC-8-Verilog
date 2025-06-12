@@ -22,7 +22,7 @@ module tb_controller;
     wire load_immediate_b;
     wire store;
     wire jump;
-    wire clk;
+    wire clk_decode;
 
 controller uut (
     .instruction(instruction),
@@ -44,7 +44,7 @@ controller uut (
     .load_immediate_b(load_immediate_b),
     .store(store),
     .jump(jump),
-    .clk(clk)
+    .clk_decode(clk_decode)
 );
 
 always #5 base_clk = ~base_clk;

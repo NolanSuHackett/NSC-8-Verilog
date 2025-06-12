@@ -8,7 +8,8 @@ module tb_accumulator;
     reg clk;
     reg load_a;
     reg output_enable;
-    wire [X-1:0] data_out;
+    wire [X-1:0] data_out_bus;
+    wire [X-1:0] data_out_alu;
 
 
 accumulator #(.X(X)) uut (
@@ -17,7 +18,8 @@ accumulator #(.X(X)) uut (
 .clk(clk),
 .load_a(load_a),
 .output_enable(output_enable),
-.data_out(data_out)
+.data_out_bus(data_out_bus),
+.data_out_alu(data_out_alu)
 
 );
 

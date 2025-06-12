@@ -3,6 +3,7 @@ module instruction_register #(parameter N = 8) (
     input wire clk,
     input wire output_enable_ir,
     input wire load_ir,
+    input wire clear_ir,
     output wire [(N/2)-1:0] bus_output,
     output wire [(N/2)-1:0] controller_output
 
@@ -15,7 +16,7 @@ n_bit_register #(N/2) upper_nibble_ir (
     .write_enable(load_ir),
     .data_in(data_in[N-1:N/2]),
     .data_out(controller_output),
-    .clear(1'b0)
+    .clear(clear_ir)
 
 );
 
@@ -24,7 +25,7 @@ n_bit_register #(N/2) lower_nibble_ir (
     .write_enable(load_ir),
     .data_in(data_in[(N/2)-1:0]),
     .data_out(buffer_input),
-    .clear(1'b0)
+    .clear(clear_ir)
 );
 
 

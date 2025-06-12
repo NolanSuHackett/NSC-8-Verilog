@@ -18,7 +18,7 @@ module controller  (
     output reg load_immediate_b,
     output reg store,
     output reg jump,
-    output wire clk
+    output wire clk_decode
 );
 
 
@@ -38,7 +38,7 @@ wire output_clock = base_clk & ~HLT;
 
 wire [5:0] timing;
 
-assign clk = output_clock;
+assign clk_decode = output_clock;
 
 ring_counter #(6) ring_counter_controller (
     .reset_ring(reset_ring),
