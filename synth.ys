@@ -1,0 +1,19 @@
+read_verilog Source/NSC8.v
+read_verilog Source/accumulator.v
+read_verilog Source/alu.v
+read_verilog Source/b_register.v
+read_verilog Source/controller.v
+read_verilog Source/instruction_register.v
+read_verilog Source/mar.v
+read_verilog Source/n_bit_register.v
+read_verilog Source/n_bit_register_falling.v
+read_verilog Source/n_tristate_buffer.v
+read_verilog Source/output.v
+read_verilog Source/output_register.v
+read_verilog Source/program_counter.v
+read_verilog Source/ram.v
+read_verilog Source/ring_counter.v
+hierarchy -top NSC8
+proc; opt; fsm; opt; memory; opt
+write_json synth_output.json
+write_verilog synth_output.v

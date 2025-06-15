@@ -1,0 +1,19 @@
+# synth.ys - synthesis flow for NSC8
+read_verilog *.v         # Load all Verilog modules
+hierarchy -check -top top  # Set top-level module
+
+# Lowering and optimization
+proc; opt
+fsm; opt
+memory; opt
+
+# Map to generic gates
+synth -top top
+
+# Optional: if you have a cell library
+# dfflibmap -liberty mylib.lib
+# abc -liberty mylib.lib
+
+# Final cleanup & output
+opt
+write_verilog top_synth.v

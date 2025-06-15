@@ -9,7 +9,7 @@ reg reset_ring;
 reg clear_ir;
 wire [N-1:0] output_contents;
 
-NSC8 #(N) uut (
+NSC8 uut (
     .clk(clk),
     .reset_counter(reset_counter),
     .reset_ring(reset_ring),
