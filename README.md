@@ -18,7 +18,7 @@
 
 ## Overview
 
-The **NSC-8 architecture** retains the core of SAP-1—such as the program counter, memory, registers, and control logic—while adding new instructions (`LDAI`, `STA`, `ADDI`, `SUBI`, `JUMP`) for more instructional flexibility and functionality. This README outlines the design, logic, and usage of NSC-8.
+The **NSC-8 architecture** retains the core of SAP-1—such as the program counter, memory, registers, and control logic—while adding new instructions (`LDAI`, `STA`, `ADDI`, `SUBI`, `JUMP`) for more instructional flexibility and functionality. This README outlines the design, logic, and usage of NSC-8. Report and circuit files can be found in the documentation folder.
 
 ---
 
