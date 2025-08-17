@@ -93,8 +93,6 @@ Refer to the full report for machine code details and expected results.
 
 ---
 
-## Project Structure
-
 ## Getting Started
 
 Logisim:
