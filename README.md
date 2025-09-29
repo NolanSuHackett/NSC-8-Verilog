@@ -78,7 +78,7 @@ Every cycle starts with the **fetch phase** (T1–T3):
 2. **T2**: Increment PC (`CP`)  
 3. **T3**: RAM → bus → IR (`CE_LOW`, `LI_LOW`); opcode sent to controller
 
-Instruction-specific logic follows in T4–T6. Detailed timing and circuit diagrams are available in the PDF and will be added to the `images/` folder.
+Instruction-specific logic follows in T4–T6. Detailed timing and circuit diagrams are available in the PDF with the full report.
 
 ---
 
@@ -101,7 +101,7 @@ Logisim:
 - Download preloaded ram content
 - right click on each RAM Component and upload the respective upper and lower bit sets from either the original architecture or added architecture.
 - ensure the clock is currently a 0
-- Make the first bit the 6 bit ring counter a 1, the ring counter should display 100000.
+- Make the first bit of the 6 bit ring counter a 1, the ring counter should display 100000.
 - ensure clock ticks are enabled and run the program
 - compare with documented test results in the PDF Report.
 
